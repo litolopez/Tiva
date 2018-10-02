@@ -1,0 +1,223 @@
+// sass-lint:disable force-element-nesting, force-pseudo-nesting, no-empty-rulesets, no-mergeable-selectors, one-declaration-per-line
+
+/* -----------------------------------------
+	02. Main Navigation
+----------------------------------------- */
+.nav {
+	display: block;
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+}
+
+.navigation-main {
+	@include clearfix;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+
+	// Apply top margin to the fullwidth menu to keep
+	// it more distanced from the logo
+	@at-root {
+		.head-mast {
+			[class^="col-lg-12"]  {
+				.navigation-main {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	// Functional Styles
+	// ===================================
+	li { position: relative; }
+	> li { display: inline-block; }
+	a { display: block; white-space: nowrap; }
+
+	ul {
+		text-align: left;
+		position: absolute;
+		z-index: 10;
+		visibility: hidden;
+		opacity: 0;
+		transition: transform .25s ease .2s, opacity .25s ease .2s, visibility 0s ease .35s;
+		transform: translate(0, 10px);
+		margin-left: 12px;
+	}
+
+	ul ul {
+		top: -12px;
+		left: 100%;
+		margin: 0;
+		transform: translate(-10px, 0);
+	}
+
+	> li:first-child {
+		ul {
+			margin-left: 0;
+		}
+	}
+
+	li:hover {
+		> ul {
+			transition-delay: 0s, 0s, 0s;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		ul {
+			z-index: 15;
+		}
+	}
+
+	> li:hover > ul {
+		transform: translate(0, 0);
+	}
+
+	li li:hover > ul {
+		transform: translate(0, 0);
+	}
+
+	// Development only
+	//> li:nth-child(3),
+	//> li:first-child {
+	//	ul { transform: translate(0, 0); visibility: visible !important; opacity: 1 !important; }
+	//	ul ul { transform: translate(0, 0); opacity: 1 !important; }
+	// }
+
+	// Visual Styles
+	// ===================================
+
+	// Sub-menu containers
+	ul {
+		padding: 12px 0;
+		list-style: none;
+		background-color: $white;
+		min-width: 170px;
+		border-radius: 3px;
+		box-shadow: 0 0 24px rgba($black, .08);
+	}
+
+	// Global Menu Link Styles
+	a {
+		position: relative;
+		color: $text-color-light;
+		text-transform: uppercase;
+		font-family: $secondary-font;
+		font-size: 14px;
+	}
+
+	// First Level Menu Links
+	// -----------------------------------
+
+	// Default Styles
+	> li > a {
+		padding: 10px 0;
+		margin: 0 12px;
+	}
+
+	> li:first-child {
+		> a {
+			margin-left: 0;
+		}
+	}
+
+	// Active & Hover
+	> li:hover > a,
+	> li > a:focus,
+	> .current-menu-item > a,
+	> .current-menu-parent > a,
+	> .current-menu-ancestor > a {
+		color: $text-color;
+	}
+
+	// Sub-Menu Links
+	// -----------------------------------
+
+	// Default Styles
+	li li a {
+		padding: 6px 15px;
+		font-size: 13px;
+	}
+
+	// Active & Hover
+	li li:hover > a,
+	li li > a:focus,
+	li .current-menu-item > a,
+	li .current-menu-parent > a,
+	li .current-menu-ancestor > a {
+		color: $text-color;
+	}
+
+	// Arrows
+	// -----------------------------------
+
+	// First Level (Facing Down)
+	.menu-item-has-children > a::after {
+		content: "\f078";
+		font-family: FontAwesome;
+		font-size: 8px;
+		position: relative;
+		top: -6px;
+		right: -3px;
+		line-height: normal;
+	}
+
+	// Sub-Menus (Facing Right)
+	li .menu-item-has-children > a {
+		padding-right: 25px;
+
+		&::after {
+			content: "\f054";
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	// Nav Buttons
+	// -----------------------------------
+	.nav-button {
+		> a {
+			@include button;
+			@include button-sm;
+			margin-left: 10px;
+		}
+
+		&:last-child {
+			> a {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.navigation-main-right {
+	text-align: right;
+
+	ul ul {
+		left: auto;
+		right: 100%;
+	}
+
+	> li:last-child {
+		ul {
+			right: 0;
+		}
+
+		ul ul {
+			left: auto;
+			right: 100%;
+		}
+	}
+
+	li .menu-item-has-children > a {
+		&::after {
+			content: "\f104";
+			font-size: 1.15em;
+		}
+	}
+}
