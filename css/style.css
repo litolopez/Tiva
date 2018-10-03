@@ -219,13 +219,13 @@ blockquote cite {
 
 /* Tables */
 table {
-	border-collapse: collapse;
+	
 	border-spacing: 0;
 	width: 100%;
 }
 
 .entry-content table {
-	border-width: 1px 0 0 1px;
+	border-width: 1px 1px 1px 1px;
 	margin-bottom: 24px;
 }
 
@@ -1051,7 +1051,7 @@ button.mfp-close:hover, button.mfp-arrow:hover {
 }
 
 .page-hero-lg {
-	height: 100vh;
+	height: 50vh;
 	overflow: hidden;
 	text-align: center;
 }
@@ -1608,7 +1608,8 @@ button.mfp-close:hover, button.mfp-arrow:hover {
 }
 
 .entry-content p {
-	margin-bottom: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
@@ -2077,8 +2078,8 @@ button.mfp-close:hover, button.mfp-arrow:hover {
 	padding: 10px 0;
 	font-size: 12px;
 	font-family: Lora, serif;
-	border-top: 1px solid #f9f9f9;
-	background-color: #f9f9f9;
+	border-top: 1px solid #e4e4e4;
+	background-color: #e4e4e4;
 	color: #616161;
 }
 
@@ -3808,3 +3809,34 @@ p .alignnone {
 .hidden-xl-down {
 	display: none !important;
 }
+
+
+/*
+Customizes CSS
+*/
+
+.logo-mala {
+	width: 30%;
+	margin-right: 15px;
+	float: left;
+}
+
+.entry-content li {
+	margin-bottom: 10px;
+}
+
+.table-price { 
+	border-color: black;
+	border: 1px;
+	border-style: solid;
+	margin-top: 20px;
+ }
+
+ .post-img { 
+
+ 	margin-top: 10px;
+
+ }
+
+
+
