@@ -7,7 +7,7 @@ jQuery(function ($) {
 	/* -----------------------------------------
 	 Responsive Menus Init with mmenu
 	 ----------------------------------------- */
-	var $mainNav = $('.navigation-main');
+	var $mainNav = $('#navigation-main');
 	var $mobileNav = $('#mobilemenu');
 
 	$mainNav.each(function () {

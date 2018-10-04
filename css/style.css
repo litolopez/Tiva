@@ -3921,5 +3921,63 @@ Customizes CSS
   	margin-bottom: 15px;
 
    }
+   
+   .container a{ 
+   		font-size: 12px;
+    }
+
+/*
+    @media (max-width: 575px) {
+	.m-dn {
+		display: in !important;
+	}
+	}*/
+
+	
+	@media (max-width: 991px) {
+		.m-dn{
+			display: none !important;
+		}
+	}
+
+
+	@media (max-width: 1199px) {
+
+		.m-dn-p{
+			display: none !important;
+		}
+		
+		.adap-2{ 
+
+			display: inline-block !important;
+
+		 }
+
+		 .adap-1{ 
+
+		 	display: none;
+
+		 }
+	
+	}
+
+
+	@media (min-width: 1200px) {
+
+		.adap-2{ 
+
+			display: none;
+
+		 }
+
+		 .adap-1{ 
+
+		 	display: inline-block !important;
+
+		 }
+		
+	}
+
+
 
 
