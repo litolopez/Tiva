@@ -3878,4 +3878,48 @@ Customizes CSS
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+.blog-article { 
+
+	margin-bottom: 15px;
+
+}
+
+.blog-article-rigth{ 
+
+	margin-bottom: 25px;
+ }
+
+.form-comp{ 
+
+	padding: 10px;
+	order: 2px solid #eee
+	box-shadow: none;
+
+ }
+
+.form-comp-btn{ 
+
+	padding: 10px;
+	order: 2px solid #eee
+	box-shadow: none;
+	text-align: center;
+
+ }
+
+ .div-contact{ 
+ 	border-right: 1px;
+ 	border-left: 0px;
+ 	border-bottom: 0px;
+ 	border-top: 0px;
+ 	border-style: solid;
+
+
+  }
+
+  .contact-info{
+
+  	margin-bottom: 15px;
+
+   }
+
 
